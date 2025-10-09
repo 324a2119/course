@@ -18,10 +18,11 @@
             <td><span th:text="*{r.dt}"></span></td>
             <td><span th:text="*{r.cst}"></span>～<span th:text="*{r.cen}"></span></td>
             <td><span th:text="*{r.cname}"></span></td>
+            <td><button type="submit" th:formaction="@{/course/cancelDisp}">キャンセル</button></td>
         </tr>
     </table>
 <form action="@{/}" method="get">
-    
+    <button type="submit" th:formaction="@{/course/back}">戻る</button>
 </form>
 
 
