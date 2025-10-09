@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/css/mycss.css}" rel="stylesheet" type="text/css">
+<title>マイリスト</title>
+</head>
+<body>
+    <h1>マイリスト</h1>
+    <table border="1" width="700">
+        <tr>
+            <th>日程</th>
+            <th>受講時間</th>
+            <th>講座名</th>
+        </tr>
+        <tr th:each="r,row:${rList}">
+            <td><span th:text="*{r.dt}"></span></td>
+            <td><span th:text="*{r.cst}"></span>～<span th:text="*{r.cen}"></span></td>
+            <td><span th:text="*{r.cname}"></span></td>
+        </tr>
+    </table>
+<form action="@{/}" method="get">
+    
+</form>
+
+
+</body>
+</html>
